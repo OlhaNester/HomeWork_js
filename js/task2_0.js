@@ -1,16 +1,14 @@
-const valueImputRef = document.querySelector ".js-value";
-const addValueBtn = document.querySelector `.js-add-value`;
-const calcBtn = document.querySelector `.js-calculate`;
-const numder = [];
+// const valueImputRef = document.querySelector ".js-value";
+// const addValueBtn = document.querySelector `.js-add-value`;
+// const calcBtn = document.querySelector `.js-calculate`;
+// const numder = [];
 
-addValueBtn.addEventListener (`click`, function () {
-    const value = Number(valueImputRef.value);
-    numbers.push(value);
-    valueImputRef.value = " ";
-    console.log(numbers);
-})
-
-
+// addValueBtn.addEventListener (`click`, function () {
+//     const value = Number(valueImputRef.value);
+//     numbers.push(value);
+//     valueImputRef.value = " ";
+//     console.log(numbers);
+// })
 
 // const numberInputRef = document.querySelector('input[name="number"]');
 // const powerInputRef = document.querySelector('input[name="power"]');

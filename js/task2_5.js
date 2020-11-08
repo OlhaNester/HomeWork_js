@@ -1,22 +1,16 @@
-const invoice = 100;
-const stock = 50;
+const checkForSpam = function (message) {
+  // Write code under this line
+  return (
+    message.toLowerCase().includes('spam') ||
+    message.toLowerCase().includes('sale')
+  );
+};
 
-// Write code under this line
-const message =
-  invoice <= stock
-    ? 'Заказ оформлен, с вами свяжется менеджер'
-    : 'На складе недостаточно товаров!';
+console.log(checkForSpam('Latest technology news')); // false
 
-console.log(message);
+console.log(checkForSpam('JavaScript weekly newsletter')); // false
 
-//если invoice равен 100
-// то значение message будет равно
-// 'Заказ оформлен, с вами свяжется менеджер'
+console.log(checkForSpam('Get best sale offers now!')); // true
 
-//если invoice равен 50
-// то значение message будет равно
-// 'Заказ оформлен, с вами свяжется менеджер'
-
-//если invoice равен 150
-// то значение message будет равно
-// 'На складе недостаточно товаров!'
+console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
+console.log(checkForSpam(''));
