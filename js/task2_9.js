@@ -41,12 +41,12 @@ function addLogin(allLogins, login) {
   const max = 16;
   if (isLoginValid(login, min, max)) {
     if (isLoginUnique(allLogins, login)) {
-      allLogins = allLogins.push(login);
-      return (message = SUCCESS);
+      allLogins = logins.push(login);
+      return SUCCESS;
     }
-    return (message = REFUSAL);
+    return REFUSAL;
   }
-  return (message = ERROR);
+  return ERROR;
 }
 
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
