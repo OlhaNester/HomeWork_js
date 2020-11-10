@@ -16,6 +16,7 @@ const keys = Object.keys(user);
 // Write code under this line
 for (const key of keys) {
   message = message + (message === '' ? '' : '\n') + `${key}: ${user[key]}`;
+  // message = message + `${key}: ${user[key]}\n`;
 }
 
 console.log(message);

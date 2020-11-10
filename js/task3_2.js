@@ -1,12 +1,11 @@
-function findLongestWord(string = '') {
+const countProps = function (obj) {
+  'use strict';
   // Write code under this line
-}
+  return Object.keys(obj).length;
+};
 
-//console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
-// 'jumped'
+console.log(countProps({})); // 0
 
-//console.log(findLongestWord('Google do a roll'));
-// 'Google'
+console.log(countProps({ a: 1, b: 1 })); // 2
 
-//console.log(findLongestWord('May the force be with you'));
-// 'force'
+console.log(countProps({ a: 1, b: 1, c: 1, d: 1, e: 1 })); // 5
