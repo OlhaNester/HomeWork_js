@@ -1,3 +1,6 @@
+// Напиши функцию countProps(obj), которая возвращает число - количество свойств в объекте.
+// Циклы не должны использоваться
+
 const countProps = function (obj) {
   'use strict';
   // Write code under this line
