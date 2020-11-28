@@ -9,7 +9,7 @@ class Storage {
 
   addItem(item) {
     this.items.push(item);
-    return this.items;
+    // return this.items;
   }
 
   removeItem(itemName) {
