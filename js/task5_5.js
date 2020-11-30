@@ -16,7 +16,7 @@ class Car {
    */
   static getSpecs(car) {
     this.car = car;
-    return `maxSpeed: ${this.maxSpeed}, speed: ${this.speed}, isOn: ${this.isOn}, distance: ${this.distance}, price: ${this.price}`;
+    return `maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car._price}`;
   }
 
   /*
@@ -33,12 +33,12 @@ class Car {
    *  distance - пробег в километрах,
    *             начальное значение `0`
    */
-  constructor(speed, price, maxSpeed, isOn, distance) {
-    this.speed = 0;
-    this.price = price;
+  constructor({ speed = 0, price, maxSpeed, isOn = false, distance = 0 }) {
+    this.speed = speed;
+    this._price = price;
     this.maxSpeed = maxSpeed;
     this.isOn = isOn;
-    this.distance = 0;
+    this.distance = distance;
     //const speed = 0;
     //const distance = 0;
   }
@@ -75,7 +75,7 @@ class Car {
    */
   turnOff() {
     this.isOn = false;
-    this._price = 0;
+    this.speed = 0;
   }
 
   /*
@@ -87,10 +87,10 @@ class Car {
    */
   accelerate(value) {
     this.speed += value;
-    if (value < this.maxSpeed) {
+    if (this.speed < this.maxSpeed) {
       return this.speed;
     }
-    value = this.maxSpeed;
+    this.speed = this.maxSpeed;
   }
 
   /*
@@ -102,10 +102,10 @@ class Car {
 
   decelerate(value) {
     this.speed -= value;
-    if (value > 0) {
+    if ((this.speed > 0) & (this.isOn = true)) {
       return this.speed;
     }
-    value = 0;
+    this.speed = 0;
   }
 
   /*
@@ -116,8 +116,8 @@ class Car {
    * если машина заведена!
    */
   drive(hours) {
-    if ((this.isOn = true)) {
-      this.distance = hours * this.speed;
+    if (this.isOn) {
+      this.distance += hours * this.speed;
     }
     //continue;
   }
