@@ -13,7 +13,13 @@ class Storage {
   }
 
   removeItem(itemName) {
-    this.items = this.items.filter(item => item !== itemName);
+    // this.items = this.items.filter(item => item !== itemName);
+    for (let i = this.items.length; i--; ) {
+      if (this.items[i] === itemName) {
+        this.items.splice(i, 1);
+        return this.items;
+      }
+    }
   }
 }
 
