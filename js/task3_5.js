@@ -7,7 +7,7 @@
 function getAllPropValues(array, prop) {
   'use strict';
   // Write code under this line
-  // for (let i = 0; i < array.length; i += 1)
+
   const result = [];
   for (let i = 0; i < array.length; i += 1) {
     if (prop in array[i]) {
