@@ -12,10 +12,10 @@ class Storage {
     // return this.items;
   }
 
-  removeItem(itemName) {
-    // this.items = this.items.filter(item => item !== itemName);
+  removeItem(item) {
+    //this.items = this.items.filter(item => item !== itemName);
     for (let i = this.items.length; i--; ) {
-      if (this.items[i] === itemName) {
+      if (this.items[i] === item) {
         this.items.splice(i, 1);
         return this.items;
       }
