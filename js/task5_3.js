@@ -18,23 +18,9 @@ class Storage {
 
   addItem(item) {
     this.items.push(item);
-<<<<<<< HEAD
   }
   removeItem(item) {
     this.items = this.items.filter(item => item !== itemName);
-=======
-    // return this.items;
-  }
-
-  removeItem(item) {
-    //this.items = this.items.filter(item => item !== itemName);
-    for (let i = this.items.length; i--; ) {
-      if (this.items[i] === item) {
-        this.items.splice(i, 1);
-        return this.items;
-      }
-    }
->>>>>>> a8e7d66f3f19c6ecc6be3acc8ba11cf34e3b00f8
   }
 }
 

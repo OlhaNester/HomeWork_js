@@ -1,8 +1,9 @@
 function calculateTotalPrice(order) {
   let total = 0;
-    (let i = 0; i < order.length; i = i + 1) {
+  for (let i = 0; i < order.length; i += 1) {
     // Пиши код ниже этой строки
-total = total + order[i]; }
+    total = total + order[i];
+  }
   // Пиши код выше этой строки
   return total;
 }

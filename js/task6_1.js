@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-const getUserNames = array => array.map(({ name }) => name);
-
-//console.log(getUserNames(users))
-=======
 const users = [
   {
     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
@@ -105,4 +100,3 @@ console.log(getUserNames(users));
   "Blackburn Dotson",
   "Sheree Anthony",
 ] */
->>>>>>> a8e7d66f3f19c6ecc6be3acc8ba11cf34e3b00f8
