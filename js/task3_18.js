@@ -38,7 +38,7 @@ const atTheOldToad = {
     const potionIndex = this.potions.findIndex((potion, index, array) => {
       if (potion.name === oldName) {
         array[index].name = newName;
-        return index;
+        return true;
       }
     });
 
