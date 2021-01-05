@@ -4,7 +4,7 @@
 
 // Дополни функцию getTotalFriendCount(users) так, чтобы она считала и
 // возвращала общее количество друзей(свойство friends) всех пользователей из массива users.
-[
+const users = [
   {
     name: 'Moore Hensley',
     email: 'moorehensley@indexia.com',
@@ -70,8 +70,30 @@
   },
 ];
 
-//const calculateTotalBalance = users =>
-//    users.reduce((total, user) => total + user.balance, 0);
+// const calculateTotalBalance = users => {
+//   return users.reduce((total, user) => {
+//     total += user.balance;
+//     return total;
+//   }, 0);
+// };
+console.log(
+  users.reduce((total, user) => {
+    total += user.balance;
+    return total;
+  }, 0),
+);
 
-const getTotalFriendCount = users =>
-  users.reduce((total, user) => (total += user.friends.length), 0);
+// const getTotalFriendCount = users =>
+//   users.reduce((total, user) => {
+//     total += user.friends.length;
+//     return total;
+//   }, 0);
+// console.log(getTotalFriendCount(users));
+
+// const getTotalFriendCount = users =>
+//   users.reduce((total, user) => {
+//     total.push(...user.friends);
+//     return total;
+//   }, []).length;
+
+// console.log(getTotalFriendCount(users));
