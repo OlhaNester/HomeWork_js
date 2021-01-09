@@ -97,3 +97,9 @@ console.log(
 //   }, []).length;
 
 // console.log(getTotalFriendCount(users));
+
+const getNamesSortedByFriendCount = users => {
+  return [...users]
+    .sort((first, second) => first.friends.length - second.friends.length)
+    .map(({ name }) => name);
+};
